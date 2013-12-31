@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	
+	<servlet>
+  <servlet-name>btcrateshandler</servlet-name>
+  <servlet-class>com.pq.pebcast.referenceimpl.BitcoinRateCastServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>btcrateshandler</servlet-name>
+  <url-pattern>/cron/cast/bitcoinrate</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  <servlet-name>inspQuotesHandler</servlet-name>
+  <servlet-class>com.pq.pebcast.referenceimpl.InspirationalQuotesCastServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>inspQuotesHandler</servlet-name>
+  <url-pattern>/cron/cast/inspquotes</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  <servlet-name>weatherhandler</servlet-name>
+  <servlet-class>com.pq.pebcast.referenceimpl.WeatherForecastCastServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>weatherhandler</servlet-name>
+  <url-pattern>/cron/cast/weather</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  <servlet-name>weatherTaskProcessor</servlet-name>
+  <servlet-class>com.pq.pebcast.referenceimpl.WeatherTaskProcessorServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>weatherTaskProcessor</servlet-name>
+  <url-pattern>/task/weather</url-pattern>
+</servlet-mapping>
+
+</web-app>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+	<cron>
+		<url>/cron/cast/bitcoinrate?type=all</url>
+		<description>Publish BTC conversion rates every 5 minutes
+		</description>
+		<schedule>every 30 minutes</schedule>
+	</cron>
+	<cron>
+		<url>/cron/cast/bitcoinrate?type=new</url>
+		<description> BTC look for new customers every minute</description>
+		<schedule>every 1 minutes</schedule>
+	</cron>
+
+	<cron>
+		<url>/cron/cast/weather?type=all</url>
+		<description>Publish Weather forecast every 6 hours</description>
+		<schedule>every 6 hours</schedule>
+	</cron>
+	<cron>
+		<url>/cron/cast/weather?type=new</url>
+		<description>Weather forecast look for new customers every minute
+		</description>
+		<schedule>every 1 minutes</schedule>
+	</cron>
+	<cron>
+		<url>/cron/cast/inspquotes</url>
+		<description>Publish Inspirational quotes every 30 minutes
+		</description>
+		<schedule>every 30 minutes</schedule>
+	</cron>
+
+</cronentries>
